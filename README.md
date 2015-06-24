@@ -3,7 +3,7 @@
 * **git clone git@github.com:HadesArchitect/cc.git cc**
 * **cd cc**
 * **docker build -t cc .**
-* **docker run -v `pwd`/app:/var/www/cc:rw -p 80:80 -d cc**
+* **docker run -v \`pwd\`/app:/var/www/cc:rw -p 80:80 -d cc**
 * **docker ps**
 * **docker exec -it CONTAINER_ID bash**
 * **/var/www/cc/app/console doctrine:database:create**
