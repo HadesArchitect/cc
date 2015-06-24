@@ -12,4 +12,4 @@
 * **exit**
 * **ifconfig docker0 | grep 'inet addr'**
 * Add 'DOCKER_IP cc.local' to your /etc/hosts
-* Visit cc.local in browser, use app with login 'admin' and password 'password'
+* Visit `http://cc.local/app_dev.php` in browser, use app with login 'admin' and password 'password'
