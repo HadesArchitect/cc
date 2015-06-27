@@ -45,8 +45,6 @@ RUN ln -sf /dev/stderr /var/log/nginx/error.log
 
 RUN ln -sf /dev/stdout /var/log/php5-fpm.log
 
-VOLUME ["/var/lib/mysql"]
-
 EXPOSE 80
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
