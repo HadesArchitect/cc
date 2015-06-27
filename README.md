@@ -4,11 +4,9 @@
 
 * **git clone git@github.com:HadesArchitect/cc.git cc**
 * **cd cc**
-* **docker build -t cc .**
-* **docker run -v `pwd`/app:/var/www/cc:rw -v `pwd`/db:/var/lib/mysql:rw -p 80:80 -d cc /bin/bash -c "/usr/bin/mysql_install_db"**
-* **docker run -v `pwd`/app:/var/www/cc:rw -v `pwd`/db:/var/lib/mysql:rw -p 80:80 -d cc**
+* **docker-compose up**
 * **docker ps**
-* **docker exec -it CONTAINER_ID bash** 
+* **docker exec -it CC_PANEL_CONTAINER_ID bash** 
 * **/var/www/cc/app/console doctrine:database:create**
 * **/var/www/cc/app/console doctrine:schema:update --force**
 * **/var/www/cc/app/console fos:user:create admin admin@example.com password --super-admin**
@@ -19,4 +17,4 @@
 
 ## Regular Launch
 
-**docker run -v `pwd`/app:/var/www/cc:rw -v `pwd`/db:/var/lib/mysql:rw -p 80:80 -d cc**
+**docker-compose up**
