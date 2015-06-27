@@ -1,0 +1,13 @@
+db:
+  image: mysql:5.7
+  environment:
+    MYSQL_ROOT_PASSWORD: "qwe"
+
+panel:
+  build: ./panel
+  ports:
+    - "80:80"
+  links:
+    - db
+  volumes:
+    - ./panel/web:/var/www/cc:rw

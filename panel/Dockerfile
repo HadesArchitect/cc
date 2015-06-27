@@ -10,7 +10,7 @@ ENV DEBIAN_FRONTEND="noninteractive"
 CMD ["/sbin/my_init"]
 
 RUN apt-get update
-RUN apt-get install -y curl wget build-essential python-software-properties mysql-server
+RUN apt-get install -y curl wget build-essential python-software-properties
 RUN add-apt-repository -y ppa:ondrej/php5
 RUN add-apt-repository -y ppa:nginx/stable
 RUN apt-get update
@@ -31,10 +31,6 @@ ADD cc.conf /etc/nginx/sites-enabled/
 RUN mkdir    /etc/service/nginx
 ADD nginx.sh /etc/service/nginx/run
 RUN chmod +x /etc/service/nginx/run
-
-RUN mkdir    /etc/service/mysql
-ADD mysql.sh /etc/service/mysql/run
-RUN chmod +x /etc/service/mysql/run
 
 RUN mkdir     /etc/service/phpfpm
 ADD phpfpm.sh /etc/service/phpfpm/run
